@@ -10,7 +10,7 @@
 
 ## Example Led and light bar
 
-code
+``` vhdl
 entity Intro is
   port (
     sw1: in std_logic; 
@@ -24,5 +24,5 @@ architecture Intro_ARCH of Intro is
 begin
   led1 <= sw1 or sw2 or sw3
   led2 <= (sw1 and sw2) 
-
+```
 test benching
