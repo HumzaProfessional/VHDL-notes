@@ -26,3 +26,28 @@ begin
   led2 <= (sw1 and sw2) 
 ```
 test benching
+
+Advantages of High intergration
+
+- More sillicon per unit area
+- lower development costs
+- lower power costs
+- lower power consumption
+- better performance
+- faster time to market
+
+Programmable device technology
+- SSI/MSI componenets (ROMs, Muitplexers)
+- Simple field profrmamable devices (PAL, PLA, PROM)
+- Complex field programmable devices (CPLD, FPGA)
+- Gate array asic
+- - 
+- Standard cell ASIC
+- Full custome ASIC
+
+decsion in process making
+
+
+## Synthesis
+high to low abtraction
+
