@@ -11,7 +11,7 @@
 ## Example Led and light bar
 
 ``` vhdl
-entity Intro is
+entity Intro is //
   port (
     sw1: in std_logic; 
     sw2: in std_logic;
@@ -19,6 +19,7 @@ entity Intro is
     led1: out std_logic;
     led2: out std_logic;
     led3: out std_logic;
+end Intro;
 
 architecture Intro_ARCH of Intro is
 begin
