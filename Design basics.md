@@ -1,6 +1,6 @@
 
 ``` vhdl
-entity Intro is //
+entity Intro is -- 
   port (
     sw1: in std_logic; // name: port-mode 
     sw2: in std_logic;
@@ -10,7 +10,7 @@ entity Intro is //
     led3: out std_logic;
 end Intro;
 
-architecture Intro_ARCH of Intro is
+architecture Intro_ARCH of Intro is --
 begin
   led1 <= sw1 or sw2 or sw3
   led2 <= (sw1 and sw2) 
@@ -18,12 +18,6 @@ begin
 
 
 
-### component diagram
-
-  #######################
---# sw3              led3# 
-  #                      #
---#sw2               led2#
 
 
 
@@ -52,3 +46,11 @@ General guildines
 specific guidlines
 - Architexture names: EntityName_ARCH
 - Process labels: REGISTER_CONTROL
+
+## Types of basic modeling
+- Data flow
+  Direct signal assignment
+- Strucutral
+  External components
+- Behaviroal 
+  Complex sequential definitions
