@@ -74,7 +74,7 @@ range constriant: When using a datatype
 
 
 ### class problem: Busses
-
+``` vhdl
 signal dataBus:  std_logic_vector(31 downto 0); 
 signal highLowBytes: std_logic_vector(15 downto 0); 
 signal highByte: std_logic_vector(7 downto 0); 
@@ -91,3 +91,4 @@ oddbyte <= databus(31);
 signbit <= databus(31);
 
 highlowbtye <= hightbyte & lowbyte;
+```
