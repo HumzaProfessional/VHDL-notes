@@ -20,8 +20,6 @@ begin
 
 
 
-
-
 Signals - connect elements of a block diagram
 ``` vhdl
 signal myWire: std_logic;
@@ -33,7 +31,18 @@ my
 
 ```
 
+###$ basic archetexure layout
 
+architecture Intro_ARCH of Intro is 
+ declaration area 
+ - signals
+ - constants
+ - componenets
+begin
+definition area
+- define funcitonality
+- concurrent statemnts
+end intro_ARCH;
 
 ## Naming Conventions
 
