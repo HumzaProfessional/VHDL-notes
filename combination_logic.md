@@ -54,6 +54,7 @@ x <= dataIn(0) when "000",
 
 this will require a process 
 
+``` vhdl
 process(data bus, shiftby, direction)
 begin 
    if (shiftby = "000") then
@@ -64,4 +65,4 @@ begin
               else
               dataout <= databus(6 downto 0) & '0';
               endif;
-    
+```
