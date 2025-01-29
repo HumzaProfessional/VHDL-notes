@@ -51,3 +51,17 @@ x <= dataIn(0) when "000",
 
 
 ### challegne progblem - barrel shifter
+
+this will require a process 
+
+process(data bus, shiftby, direction)
+begin 
+   if (shiftby = "000") then
+    data out <= databus;
+    elsif( shiftby = "001") then
+     if(direction = '0') then
+              dataout <= '0' & databus(7 downto 1);
+              else
+              dataout <= databus(6 downto 0) & '0';
+              endif;
+    
