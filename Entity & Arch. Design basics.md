@@ -31,15 +31,15 @@ my
 
 ```
 
-###$ basic archetexure layout
+### basic archetexure layout
 
-architecture Intro_ARCH of Intro is 
- declaration area 
+#### architecture Intro_ARCH of Intro is 
+##### declaration area 
  - signals
  - constants
  - componenets
 begin
-definition area
+##### definition area
 - define funcitonality
 - concurrent statemnts
 end intro_ARCH;
