@@ -50,7 +50,7 @@ x <= dataIn(0) when "000",
 - control: 
 
 
-### challegne progblem - barrel shifter
+### challegne progblem - barrel shifter - 8bit
 
 this will require a process 
 
@@ -65,4 +65,22 @@ begin
               else
               dataout <= databus(6 downto 0) & '0';
               endif;
+```
+
+### barrel shifter - 32 bit
+
+``` vhdl
+process (databus, shiftby, direction)
+        variable tempdata; shiftby(31 downto 0)
+begin
+        tempdata := databus;
+        for i in 0 to 31 loop
+        if(shiftby < i) then
+                if(direction = '0') then
+                        tempdata := '0' & tempdata(31 downto 1);
+                 else
+                        tempdata := tem
+                 endif
+            
+
 ```
