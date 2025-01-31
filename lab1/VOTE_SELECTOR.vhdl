@@ -30,7 +30,7 @@ begin
      end process;
 
 
-    -- Alternatively, manually count
+  
     -- 
     -- Determine the outcome using with-select
     with vote_count select
