@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity VOTE_SELECT is
   port(
-    head_ref: in std_logic;
+    head_ref: in std_logic; -- all 
     ref_1 : in std_logic;
     ref_2 : in std_logic;
     ref_2: in std_logic;
@@ -15,20 +15,9 @@ entity VOTE_SELECT is
 end VOTE_SELECT
 
  architecture Behavioral of VOTE_SELECT is
-    signal vote_count : integer range 0 to 4;
     signal votes      : std_logic_vector(3 downto 0);
 begin
     votes <= head_ref & ref_1 & ref_2 & ref_3; -- each vote is assigned to each bit of votes vector.
-
-    -- Count the number of '1's
-  process(votes)
-     begin
-        vote_count <= to_integer(unsigned(votes(0))) + -- integers are needed to add up thr votes
-                     to_integer(unsigned(votes(1))) +
-                     to_integer(unsigned(votes(2))) +
-                     to_integer(unsigned(votes(3)));
-     end process;
-
 
   
     with votes select
