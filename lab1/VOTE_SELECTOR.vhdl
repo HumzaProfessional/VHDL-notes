@@ -23,7 +23,7 @@ begin
     -- Count the number of '1's
   process(votes)
      begin
-        vote_count <= to_integer(unsigned(votes(0))) +
+        vote_count <= to_integer(unsigned(votes(0))) + -- integers are needed to add up thr votes
                      to_integer(unsigned(votes(1))) +
                      to_integer(unsigned(votes(2))) +
                      to_integer(unsigned(votes(3)));
