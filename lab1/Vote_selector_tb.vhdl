@@ -1,35 +1,37 @@
 library ieee;
-ue ieee.std_logic_1164.all;
+use IEEE.STD_LOGIC_1164.ALL;
 
 entity Voter_TB is
 end Voter_TB;
 
 architecture Voter_TB_ARCH of Voter_TB is 
-  component voter
+  component Voter
   port (
-         head_ref : in std_logic;
-          ref_1 : in std_logic;
-         ref_2 : in std_logic;
-         ref_3: in std_logic;
-         vote : out std_logc;
+        signal head_ref: in std_logic;
+        signal ref_1 : in std_logic;
+        signal ref_2 : in std_logic;
+        signal ref_3: in std_logic;
+        signal vote : out std_logic
     );
   end component;
 
-  signal head_ref : in std_logic;
-  signal ref_1 : in std_logic;
-  signal ref_2 : in std_logic;
-  signal ref_3 : in std_logic;
+  signal head_ref : std_logic;
+  signal ref_1 : std_logic;
+  signal ref_2 : std_logic;
+  signal ref_3 : std_logic;
+  signal vote: std_logic;
 
 begin 
-  UUT: Intro port map(
-    head_ref => head_ref;
-    ref_1 => ref_1;
-    ref_2 => ref_2;
-    ref_3 => ref_3;
+  UUT: Voter port map(
+    head_ref => head_ref,
+    ref_1 => ref_1,
+    ref_2 => ref_2,
+    ref_3 => ref_3,
+    vote => vote
     );
 
 SWITCH_DRIVER: process
-  begin
+begin
     head_ref <= '0';
     ref_1 <= '0';
     ref_2 <= '0';
@@ -109,12 +111,16 @@ SWITCH_DRIVER: process
     ref_1 <= '1';
     ref_2 <= '1';
     ref_3 <= '1';
-    wait;
+    wait; --suspend process forever
 end process;
 
 end Voter_TB_ARCH;
       
 
+
+    
+    
+    
 
     
     
