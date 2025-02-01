@@ -2,20 +2,19 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity VOTE_SELECT is
+entity VoteSelect is
   port(
     head_ref: in std_logic; -- all 
     ref_1 : in std_logic;
     ref_2 : in std_logic;
-    ref_2: in std_logic;
+    ref_3: in std_logic;
     vote: out std_logic
-
     );
 
-end VOTE_SELECT
+end VoteSelect;
 
- architecture Behavioral of VOTE_SELECT is
-    signal votes      : std_logic_vector(3 downto 0);
+architecture Behavioral_ARCH of VoteSelect is
+    signal votes: std_logic_vector(3 downto 0);
 begin
     votes <= head_ref & ref_1 & ref_2 & ref_3; -- each vote is assigned to each bit of votes vector.
 
@@ -38,13 +37,8 @@ begin
                 '1' when "1110",  
                 '1' when "1111",  -- 4 '1's: Majority '1'
                 'X' when others;    -- Undefined case
-    -- Determine the outcome using with-select
- --   with vote_count select
-   --     vote <= '1' when 3 | 4,                -- Majority '1'
-     --           head_ref when 2,               -- Tie: head_ref's vote
-       --         '0' when 0 | 1,                -- Majority '0'
-         --       'X' when others;               -- Undefined (shouldn't occur)
-end Behavioral;
+end Behavioral_ARCH;
   
- 
+  
+
     
