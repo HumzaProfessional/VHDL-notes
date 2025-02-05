@@ -23,11 +23,11 @@ architecture Voter_TB_ARCH of Voter_TB is -- declaration of port
 
 begin 
   UUT: Voter port map( -- delcaration of inputs and outputs
-    head_ref => head_ref,
-    ref1 => ref_1,
-    ref2 => ref_2,
-    ref3 => ref_3,
-    finalvote => vote
+    head_ref => headref,
+    ref1 => ref1,
+    ref2 => ref2,
+    ref3 => ref3,
+    finalvote => finalvote
     );
 
 SWITCH_DRIVER: process -- where akk possible outputs are decided
