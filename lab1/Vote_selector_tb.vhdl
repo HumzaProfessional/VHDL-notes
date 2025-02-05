@@ -47,7 +47,7 @@ begin
     ref2 <= '0';
     ref3 <= '0';
     wait for 20 ns;
-   headref <= '1';
+   headref <= '1'; -- tie, final vote should be 1 since headref = 1
     ref1 <= '1';
     ref2 <= '0';
     ref3 <= '0';
