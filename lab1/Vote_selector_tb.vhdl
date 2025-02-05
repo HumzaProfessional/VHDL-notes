@@ -23,7 +23,7 @@ architecture Voter_TB_ARCH of Voter_TB is -- declaration of port
 
 begin 
   UUT: Voter port map( -- delcaration of inputs and outputs
-    head_ref => headref,
+    headref => headref,
     ref1 => ref1,
     ref2 => ref2,
     ref3 => ref3,
