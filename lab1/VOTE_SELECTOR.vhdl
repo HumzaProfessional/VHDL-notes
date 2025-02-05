@@ -1,10 +1,8 @@
 -- This lab demonstrates a 4 inputs of votes from referees.
 -- It determine the decision of the call from the votes.
 -- The vote is determined by the majority: either 1's or 0's.
--- if there 
-
---
-
+-- if there is a tie, the head referee's vote is the final decision
+-- A select statement is used to determine the outcome
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
