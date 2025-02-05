@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity VoteSelect is
+entity VoteSelect is -- making of the port
   port(
     head_ref: in std_logic; -- all 
     ref_1 : in std_logic;
@@ -13,8 +13,8 @@ entity VoteSelect is
 
 end VoteSelect;
 
-architecture Behavioral_ARCH of VoteSelect is
-    signal votes: std_logic_vector(3 downto 0);
+architecture Behavioral_ARCH of VoteSelect is 
+    signal votes: std_logic_vector(3 downto 0); -- vector which will contain the votes as bits
 begin
     votes <= head_ref & ref_1 & ref_2 & ref_3; -- each vote is assigned to each bit of votes vector.
 
