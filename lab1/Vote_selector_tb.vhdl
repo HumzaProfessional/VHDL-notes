@@ -36,8 +36,8 @@ begin
     ref1 <= '0';
     ref2 <= '0';
     ref3 <= '0';
-    wait for 20 ns;
-    headref <= '1';
+    wait for 20 ns; -- waiting needed for delay
+    headref <= '1'; -- vote is "1000", 0 is the final votes
     ref1 <= '0';
     ref2 <= '0';
     ref3 <= '0';
