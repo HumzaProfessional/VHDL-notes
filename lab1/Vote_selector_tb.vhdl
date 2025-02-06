@@ -5,7 +5,7 @@ entity Voter_TB is -- entity is not needed
 end Voter_TB;
 
 architecture Voter_TB_ARCH of Voter_TB is -- declaration of port
-  component Voter
+  component VOTER_SELECTOR
   port (
         signal headref: in std_logic; 
         signal ref1 : in std_logic;
@@ -22,7 +22,7 @@ architecture Voter_TB_ARCH of Voter_TB is -- declaration of port
   signal finalvote: std_logic;
 
 begin 
-  UUT: Voter port map( -- delcaration of inputs and outputs
+  UUT: VOTER_SELECTOR port map( -- delcaration of inputs and outputs
     headref => headref,
     ref1 => ref1,
     ref2 => ref2,
