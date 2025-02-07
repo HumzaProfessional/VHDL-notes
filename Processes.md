@@ -38,7 +38,7 @@ end case;
 
 ```
 
-###### case statement, witg morethan2 signal
+##### case statement, with morethan2 signal
 ``` vhdl
 case (switches) is
 when "0111" | "1011" | "1110" | "1111" 
