@@ -78,5 +78,17 @@ end process;
 
  ````
 
+#### variables vs signals
+Updating values
+- variables update instantly
+- signal updarte at the end of process
+Declaration
+- variables declared  inside processes
+- signals declared outside prcoesses
+
+Assignemnts
+- Variables assigned with :=
+- signals assigned with <=
+
 
 
