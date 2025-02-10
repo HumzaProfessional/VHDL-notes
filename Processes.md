@@ -92,3 +92,22 @@ Assignemnts
 
 
 
+#### example
+= Write a process that will count te number of '0' valyrs in a 32 bit vector and ouput ACTUVE on output isEvan if number of 0's is even.
+
+``` vhdl
+process (datain)
+  variable count: integer range 0 t0 32;
+  isEven <= not ACTIVE
+begin
+  count :- 0;
+for i in 0 to 31 loop
+ if (datain(i) = '0') then
+  count := count +1;
+endif
+if (count mod 2)
+  isEven <= ACTIVE;
+  endif
+end process;
+
+```
