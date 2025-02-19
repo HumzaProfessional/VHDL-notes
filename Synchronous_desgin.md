@@ -70,3 +70,33 @@ enableCount <= not ACTIVE;
 
 ```
 
+
+#### Quiz question - 16-bit shift register
+
+control 
+- leadEn
+- shiftEn
+- shiftmode('0' - shiftleft; '1' - shiftright)
+- constant LEFT_SHIFT_MODE
+- constant RIGHT_SHIFT_MODE:
+  
+``` vhdl
+SHIFT_REG process (clock, reset)
+
+begin 
+  if (reset = ACTIVE) then
+     dataOUT <= (others => '0');
+  elsif (risingedge(clock)) then
+    if(loadEn = ACTIVE) then
+      dataOUT <= dataIn;
+      elsif (shiftEN = ACTIVE) then
+        if (shiftMode = LEFT_MODE_MODE) then
+              dataOUT <= dataOUT(14 downto 0) & '0';
+          else
+              dataOUT <= '0' & dataOUT(15 downto 1);
+          endif
+        endif
+    endif
+ end process;
+```
+
