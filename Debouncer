@@ -1,0 +1,4 @@
+
+DEBOUNCE process(reset, clock)
+  variable sampleReg: std_logic_vector(19 downto 0)
+     
