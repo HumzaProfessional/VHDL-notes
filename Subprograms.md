@@ -25,18 +25,18 @@ end rising_edge;
 #### Another Function
 ``` vhdl
 function to_bcd_8bit( inputValue: integer) return std_logic_vector is
-variable tensValue: integer;
-variable onesValue: integer;
+  variable tensValue: integer;
+  variable onesValue: integer;
 begin
-if (inputValue < 99) then
-tensValue := inputValue / 10;
-onesValue := inputValue mod 10;
+  if (inputValue < 99) then
+    tensValue := inputValue / 10;
+    onesValue := inputValue mod 10;
 else
-tensValue := 9;
-onesValue := 9;
+  tensValue := 9;
+  onesValue := 9;
 end if;
-return std_logic_vector(to_unsigned(tensValue, 4))
-& std_logic_vector(to_unsigned(onesValue, 4));
+  return std_logic_vector(to_unsigned(tensValue, 4))
+    & std_logic_vector(to_unsigned(onesValue, 4));
 end to_bcd_8bit;
 
 
