@@ -3,6 +3,11 @@
 
 ### D flip-flop Asynchrpnus Reset
 
+Sensitivity list
+- Clock input validation
+- Asynchronous reset
+- Condition for sequential logic
+
 ``` vhdl
 architecture DFlipFlop_ARCH of DFlipFlop is
   constant ACTIVE: std_logic := '1';
@@ -18,7 +23,25 @@ begin
 end DFLIPFLOP_ARCH;
 ```
 
+###  D flip-flop Syncronus
 
+``` vhdl
+architecture DFlipFlop_ARCH of DFlipFlop is
+  constant ACTIVE: std_logic := '1';
+begin
+  process(clock)
+  begin
+    if (rising_edge(clock)) then
+      if (reset=ACTIVE) then
+        Q <= '0';
+    else
+        Q <= D;
+      end if;
+  end if;
+end process;
+end DFlipFlop_ARCH;
+
+```
 
 ## Common Sychronus elements 
 #### Preloadable down counter
@@ -40,6 +63,32 @@ else
 end process;
 ```
 
+### Preloadable Up/down counter
+
+- External std_logic signals: reset, clock, load, up
+- External std_logic_vector: count, newValue
+
+``` vhdl
+DOWN_COUNTER: process(clock, reset)
+variable counter: unsigned(7 downto 0);
+begin
+  if (reset=ACTIVE) then
+    counter := (others=>'0');
+  elsif (rising_edge(clock)) then
+    if (load=ACTIVE) then
+      counter <= unsigned(newValue);
+  else
+    if (up=ACTIVE) then
+      counter := counter + 1;
+  else
+  counter := counter - 1;
+    end if;
+  end if;
+end if;
+count <= std_logic_vector(counter);
+end process;
+
+```
 
 #### Enable Pulse Generator
 - Separate sequential and combinational elements
@@ -74,7 +123,7 @@ enableCount <= not ACTIVE;
 #### Quiz question - 16-bit shift register
 
 control 
-- leadEn
+- ledEn
 - shiftEn
 - shiftmode('0' - shiftleft; '1' - shiftright)
 - constant LEFT_SHIFT_MODE
