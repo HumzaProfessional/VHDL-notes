@@ -24,7 +24,7 @@ end rising_edge;
 
 #### Another Function
 ``` vhdl
-function to_bcd_8bit( inputValue: integer) return std_logic_vector is
+function to_bcd_8bit( inputValue: integer) return std_logic_vector is 
   variable tensValue: integer;
   variable onesValue: integer;
 begin
@@ -40,4 +40,30 @@ end if;
 end to_bcd_8bit;
 
 
+```
+
+### Procedures 
+- Arguments include both inputs and outputs
+- Allowed mode: in, out, inout
+- Parameter classes: constant(default), variable, and signal
+- Can utilize wait statements (limited)
+
+``` vhdl
+procedure count_to_99 (signal reset:  in std_logic;
+                       signal clock: in std_logic;
+                       signal countEnable: in std_logic;
+                       signal count:  inout integer) is
+
+begin
+  if rese(ACTIVE)
+    COUNT <= 0;
+  elsif (rising_edge(clock)) then
+   if (countEnable = ACTIVE) then
+    if(count>=0 and count < 99) thenn
+      count <= count +1;
+    else
+         count <= 99;
+     end if;
+ end if;
+end count_to_99;
 ```
