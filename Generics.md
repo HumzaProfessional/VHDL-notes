@@ -37,3 +37,41 @@ end Register_ARCH;
 
 
 ````
+
+### Generic Down counter quiz qeustion
+
+``` vhdl
+entity counter is
+ generic (
+       SIZE: interger);
+       port (
+            loadEN: in std_logic;
+            decrementEN: in std_logic;
+            startCount: in std_logic_vector(SIZe-1 downto 0)
+            )
+
+architecture Counter_ARCH of Counter is
+  ocnstant ACTIVE: std_logic := '1';
+  begin
+     process( reset, clock)
+       variable count: unsigned(SIZE-1 downto 0),
+    begin 
+      if (reset := ACTIVE) then
+        count := 0;
+        currentCount :- 0;
+        zeroCOuntEN <= not ACTIVE;
+          elsif(risign_edge(clock)) then
+             if(LoadEN = ACTIVE) then
+               count := unsigned(startCount);
+            elsif(decrementEn = ACTIVE) then
+             if (count /= 0) then
+                count := count - 1;
+                if (count - 0) then
+                  zeroCountEN <= ACTIVE
+                endif;
+            endif
+        endif
+    currentCount <= std_logic_vector(count);
+  endif;
+```             
+              
