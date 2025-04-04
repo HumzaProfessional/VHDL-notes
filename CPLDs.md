@@ -7,6 +7,6 @@
 - Nonvolatile configuraiton storage (memort retains without power)
 
 #### Combinaiotnal loigcsl in CPLDS
-- All cobinaitonal logic can be represented as  sun-of-products
+- All combinational logic can be represented as  sun-of-products
 
 
