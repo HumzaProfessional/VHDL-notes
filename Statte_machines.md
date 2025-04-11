@@ -8,7 +8,7 @@ types Grades_t is {'A', 'B', 'C', "D', "F"};
 types Days_t id {MON, TUE, WEB, THU, FRI, SAT, SUN}
 
 
-```
+``` vhdl
 entity LedPatternScanner is
 port( 
 reset: in  std_logic; 
@@ -60,10 +60,9 @@ end process;
 
 
 
-``` vhdl
+``` 
 
 
 
 
 
-```
