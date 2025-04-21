@@ -1,4 +1,16 @@
 
+
+
 DEBOUNCE process(reset, clock)
-  variable sampleReg: std_logic_vector(19 downto 0)
+  variable filter unsigned(7 downto 0),
+begin 
+  if(reset = ACTIVE =) then
+  debounce <= '0'
+  filter := (others=> '0');
+elsid(rising-edge(clock)) then
+ filter := filter(6 downto 0) then
+    
+
+
+
      
