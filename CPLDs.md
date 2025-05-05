@@ -3,7 +3,7 @@
 - Genrally lower pin counts
 - Generally lower costs
 - Generally lower power consumption
-- Favoirs cobinaiotnla logic
+- Favoirs combinational logic
 - Nonvolatile configuraiton storage (memort retains without power)
 
 #### Combinaiotnal loigcsl in CPLDS
