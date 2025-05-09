@@ -23,3 +23,8 @@ begin
 end generate {geenrate-label]
 ```
 
+#### Example:
+
+Transform_stagL for i in 1 to 3 geenrate
+begin
+ crossproduct
